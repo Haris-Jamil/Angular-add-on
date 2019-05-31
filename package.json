@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "gas:build": "ng build google-docs",
+    "gas:publish": "gulp && cd app_script && clasp push",
+    "msw:build": "ng build ms-word"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +22,11 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "clasp": "^1.0.0",
     "core-js": "^2.5.4",
+    "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
+    "gulp-rename": "^1.4.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -29,9 +36,9 @@
     "@angular/cli": "~7.3.8",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^8.9.5",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
